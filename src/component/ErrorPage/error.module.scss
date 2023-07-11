@@ -1,0 +1,74 @@
+@mixin TitilliumWeb {
+  font-family: "Titillium Web", sans-serif;
+}
+@mixin RobotoRedular {
+  font-family: "Roboto Redular", sans-serif;
+}
+@mixin no_name_37 {
+  font-family: 'no_name_37', sans-serif;
+}
+
+.background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+}
+
+.background::before {
+  background: url("/background.jpeg") no-repeat center center;
+  will-change: transform;
+  background-size: cover;
+  position: fixed;
+  content: ' ';
+  height: 130vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30vh;
+  .board {
+    padding: 1vw;
+    max-width: 30vw;
+    border-radius: 0.4vw;
+    background: #252020;
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.6vw;
+      margin-bottom: 2vw;
+      .text {
+        @include TitilliumWeb;
+        font-size: 2.4vw;
+        padding: 0.6vw;
+        border: solid #FFFFFF;
+        border-width: 0.4vh 0 0.4vh 0;
+      }
+    }
+    .big_text {
+      @include RobotoRedular;
+      font-size: 1.7vw;
+      margin-bottom: 0.6vw;
+    }
+    .text {
+      @include no_name_37;
+      font-size: 1.3vw;
+    }
+    .back_text {
+      @include no_name_37;
+      font-size: 1.5vw;
+      margin-top: 0.5vw;
+      .link {
+        color: #F5AC3C;
+      }
+    }
+  }
+}
+

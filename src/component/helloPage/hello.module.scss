@@ -1,0 +1,203 @@
+// === Mixin ===
+@font-face {
+  font-family: RotondaBold;
+  src: url(../../../public/fonts/Rotonda_bold.ttf);
+}
+
+@font-face {
+  font-family: TitilliumWeb;
+  src: url(../../../public/fonts/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+  font-family: RobotoRedular;
+  src: url(../../../public/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: WhitneyLight;
+  src: url(../../../public/fonts/Whitney-Light.ttf);
+}
+
+@font-face {
+  font-family: no_name_37;
+  src: url(../../../public/fonts/no_name_37_Regular.otf);
+}
+
+
+@mixin RotondaBold {
+  font-family: "RotondaBold", sans-serif;
+}
+
+@mixin TitilliumWeb {
+  font-family: "Titillium Web", sans-serif;
+}
+
+@mixin RobotoRedular {
+  font-family: "Roboto Redular", sans-serif;
+}
+
+@mixin WhitneyLight {
+  font-family: "WhitneyLight", sans-serif;
+}
+
+@mixin no_name_37 {
+  font-family: 'no_name_37', sans-serif;
+}
+
+// === / Mixin ===
+// === Variables ===
+$base: 4px;
+// === / Variables ===
+.background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+}
+
+.background::before {
+  background: url("/background.jpeg") no-repeat center center;
+  background-size: cover;
+  content: ' ';
+  height: 130vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 130vw;
+  will-change: transform;
+  z-index: -1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+
+  .menu_background {
+    color: #FFFFFF;
+    background: #252020;
+    border-radius: $base*3;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    .menu {
+
+      margin: $base*4;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .text {
+          @include TitilliumWeb;
+          font-size: $base*10;
+          padding: $base;
+          border: $base*0.25 solid #FFFFFF;
+          border-width: 1px 0 1px 0;
+        }
+      }
+
+      .main {
+        @include RobotoRedular;
+        font-size: $base*5;
+        color: #FFFFFF;
+        text-align: left;
+
+        .under_logo {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          font-size: $base*5;
+          padding-top: $base;
+          padding-bottom: $base*4;
+
+        }
+
+        .space {
+          padding-bottom: $base*4;
+        }
+
+      }
+
+      .grid_section {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        margin-top: $base*18;
+        margin-bottom: $base*35;
+
+        .text {
+          margin-left: $base*5;
+          margin-right: $base*4;
+
+          .section_text_logo {
+            display: flex;
+            margin-bottom: $base;
+
+            .text_logo {
+              @include no_name_37;
+              font-size: $base*8;
+              padding-bottom: $base;
+              border: $base solid #FFFFFF;
+              border-width: 0 0 2px 0;
+            }
+          }
+
+          .text_under_logo {
+            @include WhitneyLight;
+            text-align: left;
+          }
+        }
+
+        .img_passport {
+          height: $base*76;
+          position: absolute;
+          left: 100%;
+          top: 52%;
+          transform: translate(-50%, -49%);
+          pointer-events: none;
+        }
+
+        .img_passport::selection {
+          color: rgba(100%, 100%, 100%, 0);
+        }
+      }
+
+      .btn_background {
+        margin-top: $base*9;
+        border: 0 solid #663399;
+        border-radius: $base;
+        padding-top: $base*3;
+        background: #663399;
+
+        .btn {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          color: #FFFFFF;
+          text-decoration: none;
+          padding-left: $base;
+          padding-right: $base;
+          padding-bottom: $base*3;
+
+          .text {
+            @include RotondaBold;
+            font-size: $base*7;
+            padding-right: $base*2;
+          }
+
+          .noSelection {
+            width: $base*9;
+          }
+        }
+      }
+    }
+  }
+}
+

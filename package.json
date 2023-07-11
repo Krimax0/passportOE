@@ -1,0 +1,31 @@
+{
+  "name": "learn-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev next dev -p 80",
+    "build": "cross-env NODE_ENV=prod next build",
+    "start": "cross-env NODE_ENV=prod next start -p 3000",
+    "server": "cross-env NODE_ENV=dev node server/app.js",
+    "serverProd": "cross-env NODE_ENV=prod node server/app.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "discord.js": "13.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "next": "^12.1.4",
+    "nodemon": "^2.0.12",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.36.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

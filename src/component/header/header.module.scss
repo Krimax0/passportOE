@@ -1,0 +1,113 @@
+$base: 4px;
+@mixin TitilliumWeb {
+  font-family: "Titillium Web", sans-serif;
+}
+@mixin RobotoBold {
+  font-family: "RobotoBold", sans-serif;
+}
+@font-face {
+  font-family: TitilliumWeb;
+  src: url(../../../public/fonts/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url(../../../public/fonts/Roboto-Bold.ttf);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background: #252020;
+  padding: 0.3vw 0.2vw 0.3vw 0.3vw;
+  position: relative;
+  color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  .avatar_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .avatar {
+      height: 2.8vw;
+      border: $base*0.5 solid rgba(100%, 100%, 100%, .0);
+      border-radius: $base*100;
+      margin-right: 0.4vw;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+    .avatar::selection {
+      color: rgba(255, 255, 255, 1);
+      background: rgba(255, 255, 255, 0);
+    }
+
+    .username_section {
+      display: block;
+      height: 3vw;
+      width: 11vw;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+
+      .username {
+        position: absolute;
+        @include RobotoBold;
+        font-size: 1.2vw;
+
+        top: 50%;
+        transform: translate(0%, -50%);
+        transition: 0.5s;
+      }
+      .username::selection {
+        color: rgba(255, 255, 255, 1);
+        background: rgba(255, 255, 255, 0);
+      }
+
+      .invisible_text {
+        position: absolute;
+        @include RobotoBold;
+        font-size: 1vw;
+        color: #A73535;
+
+        top: 150%;
+        transform: translate(0%, -50%);
+        transition: 0.5s;
+      }
+      .invisible_text::selection {
+        color: #A73535;
+        background: rgba(255, 255, 255, 0);
+      }
+    }
+
+
+    .username_section:hover {
+      .username {
+        top: -150%;
+        transform: translate(0%, -50%);
+        transition: 0.5s;
+      }
+
+      .invisible_text {
+        top: 50%;
+        transform: translate(0%, -50%);
+        transition: 0.5s;
+      }
+    }
+  }
+
+  .logo {
+    @include TitilliumWeb;
+
+    border: $base*0.25 solid #FFFFFF;
+    border-width: 1px 0 1px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7vw;
+  }
+
+  .logo::selection {
+    color: white;
+    background: transparent;
+  }
+}

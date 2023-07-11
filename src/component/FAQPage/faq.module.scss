@@ -1,0 +1,73 @@
+$base: 4px;
+@mixin RobotoBold {
+  font-family: "RobotoBold", sans-serif;
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url(../../../public/fonts/Roboto-Bold.ttf);
+}
+
+.noSelection {
+  pointer-events: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.background {
+  background: #252020;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.itemQuestion {
+  @include RobotoBold;
+  color: white;
+  background: #1F1A1A;
+  margin-left: $base*2.4;
+  margin-right: $base*2.4;
+  border-radius: $base*3;
+
+  .heading {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #1F1A1A;
+    padding: $base*2;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: $base*3;
+    margin-top: $base*3;
+
+    .headingText {
+      @extend .noSelection;
+      font-size: $base*5;
+      margin-left: $base*2;
+      margin-right: $base*2;
+    }
+
+    .arrowWhite {
+      @extend .noSelection;
+      margin-left: auto;
+      height: $base*4;
+      transition: 0.5s;
+    }
+    .rotate {
+      @extend .noSelection;
+      margin-left: auto;
+      transition: 0.5s;
+      transform: rotate(180deg);
+    }
+  }
+  .specification {
+
+
+    .specificationComponent {
+    }
+    .specificationHideComponent {
+      height: 0;
+      display: none;
+    }
+  }
+}
