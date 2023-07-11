@@ -1139,7 +1139,7 @@ function Canvas() {
         const badgesItem = publicBadges[categoryBadges].map((el) => {
             if (el.id === publicBadges[categoryBadges][0].id) {
                 return (
-                    <div className={s.item} id={el.id} ref={OneElBadge} onClick={() => changeBadge(el.id + 1, is)}>
+                    <div className={s.item} id={el.id} ref={OneElBadge} onClick={() => changeBadge(el.id, is)}>
                         <div className={s.item_section_img}>
                             <img src={el.image}
                                  className={s.item_img}
@@ -1149,7 +1149,7 @@ function Canvas() {
                 )
             } else {
                 return (
-                    <div className={s.item} id={el.id} onClick={() => changeBadge(el.id + 1, is)}>
+                    <div className={s.item} id={el.id} onClick={() => changeBadge(el.id, is)}>
                         <div className={s.item_section_img}>
                             <img src={el.image}
                                  className={s.item_img}

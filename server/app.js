@@ -59,7 +59,7 @@ app.use(cors({origin: '*'}))
 app.get('/', passport.authenticate('discord', { scope: scopes, prompt: prompt }), function(req, res) {});
 app.get('/callback',
     passport.authenticate('discord', { failureRedirect: '/' }),
-    function(req, res) { res.redirect(`/info`) } // /api/info !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    function(req, res) { res.redirect(`/api/info`) } // /api/info !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 );
 app.get('/logout', function(req, res) {
     req.logout();
