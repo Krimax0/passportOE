@@ -1117,7 +1117,7 @@ function Canvas() {
     const Badges = (is) => {
         const publicBadges = [];
         let currentIndex = 0;
-        const itemsPerGroup = [23 + 1, 7, 5, 4, 5, 15, 14, 6, 3, 18, 5, 9, 6, 7, 7, 3, 5, 3, 1, 8, 4, 8];
+        const itemsPerGroup = [23 + 1, 7, 5, 4, 5, 19, 18, 6, 3, 18, 5, 9, 6, 7, 7, 3, 5, 3, 1, 8, 4, 8];
 
         for (let i = 0; i < itemsPerGroup.length; i++) {
             const group = [];

@@ -67,6 +67,10 @@ mass.badges = [
     '/badges/halloween/13.png',
     '/badges/halloween/14.png',
     '/badges/halloween/15.png',
+    '/badges/halloween/16.png',
+    '/badges/halloween/17.png',
+    '/badges/halloween/18.png',
+    '/badges/halloween/19.png',
     //Новый год
     '/badges/newYear/1.png',
     '/badges/newYear/2.png',
@@ -82,6 +86,10 @@ mass.badges = [
     '/badges/newYear/12.png',
     '/badges/newYear/13.png',
     '/badges/newYear/14.png',
+    '/badges/newYear/15.png',
+    '/badges/newYear/16.png',
+    '/badges/newYear/17.png',
+    '/badges/newYear/18.png',
     //Сезоны
     '/badges/seasons/1.png',
     '/badges/seasons/2.png',
